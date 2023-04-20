@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/slide.css">
+</head>
+
+<body>
+    <div class="slideshow-container">
+
+        <% filesList.forEach((file, index)=> { %>
+            <div class="mySlides fade">
+                <div class="numbertext">
+                    <%= index+1 %> / <%= filesList.length %>
+                </div>
+                <img src="img/<%= file %>">
+            </div>
+            <% }) %>
+
+    </div>
+
+    <div id="context-menu">
+        <div class="item" onclick="SetDelay(1)">Set Delay to 1</div>
+        <div class="item" onclick="SetDelay(5)">Set Delay to 5</div>
+        <div class="item" onclick="SetDelay(10)">Set Delay to 10</div>
+        <div class="item" onclick="SetDelay(20)">Set Delay to 20</div>
+        <div class="item" onclick="SetDelay(60)">Set Delay to 60</div>
+    </div>
+
+    <script src="js/slide.js"></script>
+
+</body>
+
+</html>
