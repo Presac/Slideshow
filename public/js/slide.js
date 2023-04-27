@@ -2,6 +2,7 @@
 let slideIndex = 0;
 let delay = 10000
 let slideTimeout
+
 showSlides();
 
 function showSlides() {
@@ -15,13 +16,6 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     slideTimeout = setTimeout(showSlides, delay);
 }
-
-//     document.addEventListener('contextmenu', function (e) {
-//         let result = prompt("Set delay (seconds)");
-//         delay = result * 1000;
-//         e.preventDefault();
-//     }, false);
-
 
 function SetDelay(input) {
     delay = input * 1000;
